@@ -65,7 +65,7 @@ const CarouselComponent = baseComponent.extend({
   })
 });
 
-const ComponentSchema = z.discriminatedUnion("type", [
+const ComponentSchema: z.ZodType = z.discriminatedUnion("type", [
   TextComponent,
   ButtonComponent,
   ImageComponent,
