@@ -131,13 +131,21 @@ export const m4 = {
                   type: "container",
                   props: {
                     direction: "column",
+                    align: "center",
                     children: [
                       {
                         type: "image",
                         props: {
-                          url: "https://via.placeholder.com/300x150",
+                          url: "https://picsum.photos/300/150",
                           width: 300,
                           height: 150,
+                          resizeMode: "cover",
+                        },
+                      },
+                      {
+                        type: "spacer",
+                        props: {
+                          size: 8,
                         },
                       },
                       {
@@ -155,13 +163,21 @@ export const m4 = {
                   type: "container",
                   props: {
                     direction: "column",
+                    align: "center",
                     children: [
                       {
                         type: "image",
                         props: {
-                          url: "https://via.placeholder.com/300x150?text=Slide+2",
+                          url: "https://picsum.photos/300/150?random=2",
                           width: 300,
                           height: 150,
+                          resizeMode: "cover",
+                        },
+                      },
+                      {
+                        type: "spacer",
+                        props: {
+                          size: 8,
                         },
                       },
                       {

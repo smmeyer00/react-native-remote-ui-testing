@@ -54,6 +54,7 @@ const ContainerComponent = baseComponent.extend({
     direction: z.enum(["row", "column"]),
     align: z.enum(["start", "center", "end", "stretch"]).optional(),
     justify: z.enum(["start", "center", "end", "space-between"]).optional(),
+    flex: z.number().optional(),
     children: z.lazy(() => ComponentArray)
   })
 });

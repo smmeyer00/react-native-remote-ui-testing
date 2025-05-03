@@ -56,6 +56,7 @@ const renderComponent = (component: any, key: number | string) => {
             {
               flex: component.props.flex ?? 0,
               flexDirection: component.props.direction,
+              // height: '100%',
               alignItems: mapAlign(component.props.align),
               justifyContent: mapJustify(component.props.justify),
               gap: 8,
@@ -75,10 +76,14 @@ const renderComponent = (component: any, key: number | string) => {
           horizontal
           pagingEnabled
           showsHorizontalScrollIndicator={false}
-          style={{ width: "100%" }}>
+          style={{ height: 200, backgroundColor: 'lightgrey' }} // Set a fixed height or make it based on content
+          contentContainerStyle={{ alignItems: "center" }}>
           {component.props.items.map((item: any, index: number) => (
             <View
-              style={{ width: 300, marginRight: 10 }}
+              style={{
+                width: 300,
+                marginRight: 10,
+              }}
               key={`${key}-${index}`}>
               {renderComponent(item, index)}
             </View>
@@ -148,11 +153,13 @@ export const RemoteMessageRenderer = ({
 
   const message = parsed.data;
 
-  return (
-    <View style={{ padding: 16 , height: "100%"}}>
+  const renderedJsx = (
+    <>
       {message.components?.map((component: any, index: string | number) =>
         renderComponent(component, index)
       )}
-    </View>
+    </>
   );
+  console.log("Rendered JSX:", renderedJsx);
+  return renderedJsx;
 };
