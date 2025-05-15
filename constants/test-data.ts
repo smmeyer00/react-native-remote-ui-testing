@@ -41,7 +41,7 @@ export const m2 = {
     {
       type: "image",
       props: {
-        url: "https://via.placeholder.com/300x150",
+        url: "https://picsum.photos/300/150",
         width: 300,
         height: 150,
         resizeMode: "cover",

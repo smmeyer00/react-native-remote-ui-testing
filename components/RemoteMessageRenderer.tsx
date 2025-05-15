@@ -59,8 +59,6 @@ const renderComponent = (component: any, key: number | string) => {
               // height: '100%',
               alignItems: mapAlign(component.props.align),
               justifyContent: mapJustify(component.props.justify),
-              gap: 8,
-              backgroundColor: "blue",
             } as ViewProps
           }>
           {component.props.children.map((child: any, index: number) =>
